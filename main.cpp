@@ -80,31 +80,50 @@ int main() {
     );
     cout << "Problem 3\n";
     problemSolution3(
-            char sex;
-    double high;
-    cout << "Sex?"<<endl;
-    cin>>sex;
-    cout << "High?" <<endl;
-    cin>> high;
+       #include <iostream>
+#include <string>
 
-    if (sex == 'm' && high < 1.7){
-        cout << "Short"<<endl;
+int main() {
+    char sex;
+    double height;
+
+    // Read sex
+    std::cout << "Enter sex (M/F): ";
+    std::cin >> sex;
+
+    // Read height
+    std::cout << "Enter height (m): ";
+    std::cin >> height;
+
+    // Determine description based on sex and height
+    std::string result;
+
+    if (sex == 'M' || sex == 'm') {
+        if (height < 1.70)
+            result = "Short";
+        else if (height >= 1.70 && height < 1.85)
+            result = "Normal";
+        else
+            result = "Tall";
+    } else if (sex == 'F' || sex == 'f') {
+        if (height < 1.60)
+            result = "Short";
+        else if (height >= 1.60 && height < 1.75)
+            result = "Normal";
+        else
+            result = "Tall";
+    } else {
+        // Invalid sex input
+        std::cerr << "Invalid input for sex. Please enter 'M' or 'F'." << std::endl;
+        return 1; // Exit with an error code
     }
-    else if (sex == 'm' && high >= 1.7 && high < 1.85){
-        cout << "Normal "<<endl;
-    }
-    else if (sex == 'm' && high >= 1.85){
-        cout << "Tall" <<endl;
-    }
-    else if (sex == 'f' && high < 1.6){
-        cout << "short"<<endl;
-    }
-    else if (sex == 'f' && high >= 1.6 && high < 1.75){
-        cout << "Normal"<<endl;
-    }
-    else if (sex == 'f' && high >= 1.75){
-        cout << "tall"<<endl;
-    }
+
+    // Display the result
+    std::cout << "Result: " << result << std::endl;
+
+    return 0;
+}
+
     );
     cout << "Problem 4\n";
     problemSolution4(   std::cout << "Enter MAC address (in x:x:x:x:x:x format): ";
