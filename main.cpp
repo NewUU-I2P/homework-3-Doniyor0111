@@ -10,28 +10,64 @@ using namespace std;
 int main() {
     cout << "Problem 1\n";
     problemSolution1(
-            const double fixamount = 13;
-    const double first30 = 0.4;
-   const  double sec20 = 0.12;
-   const  double thr10 = 1.4;
-   const  double add = 1.5;
-    int cost;
-    cout<<"Consuption = "<<endl;
-    std::cin>>cost;
+   #include <iostream>
 
+using namespace std;
 
-    if (cost <= 30){
-        cout<< double (fixamount + first30 * cost) << endl;
+int main() {
+    // Constants for the water charges
+    const double fixed_amount = 13.0;
+    const double rate_first_30m3 = 0.4;
+    const double rate_next_20m3 = 0.12;
+    const double rate_next_10m3 = 1.4;
+    const double rate_additional = 1.5;
+
+    // Variables
+    double consumption, total_cost;
+
+    // Input
+    cout << "Enter water consumption in cubic meters: ";
+    cin >> consumption;
+
+    // Calculation
+    if (consumption < 0) {
+        cout << "Water consumption cannot be negative." << endl;
+    } else {
+        total_cost = fixed_amount;
+
+        if (consumption > 30) {
+            total_cost += 30 * rate_first_30m3;
+        } else {
+            total_cost += consumption * rate_first_30m3;
+            cout << "The total cost for " << consumption << " cubic meters is: $" << total_cost << endl;
+            return 0;
+        }
+
+        if (consumption > 50) {
+            total_cost += 20 * rate_next_20m3;
+        } else {
+            total_cost += (consumption - 30) * rate_next_20m3;
+            cout << "The total cost for " << consumption << " cubic meters is: $" << total_cost << endl;
+            return 0;
+        }
+
+        if (consumption > 60) {
+            total_cost += 10 * rate_next_10m3;
+        } else {
+            total_cost += (consumption - 50) * rate_next_10m3;
+            cout << "The total cost for " << consumption << " cubic meters is: $" << total_cost << endl;
+            return 0;
+        }
+
+        total_cost += (consumption - 60) * rate_additional;
+
+        // Output
+        cout << "The total cost for " << consumption << " cubic meters is: $" << total_cost << endl;
     }
-    else if (cost <= 50){
-        cout << double ( fixamount + first30 * 30 + (cost - 30) * sec20) << endl;
-    }
-    else if (cost <= 60){
-        cout << double ( fixamount + first30 * 30 + sec20 * 20 + (cost - 50) * thr10) << endl;
-    }
-    else {
-        cout << double ( fixamount + first30 * 30 + sec20 * 20 + thr10 * 10 + (cost - 60) * add) << endl;
-    }
+
+    return 0;
+}
+
 
     );
     cout << "Problem 2\n";
