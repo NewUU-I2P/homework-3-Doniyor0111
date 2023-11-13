@@ -10,12 +10,7 @@ using namespace std;
 int main() {
     cout << "Problem 1\n";
     problemSolution1(
-   #include <iostream>
-
-using namespace std;
-
-int main() {
-    // Constants for the water charges
+  
     const double fixed_amount = 13.0;
     const double rate_first_30m3 = 0.4;
     const double rate_next_20m3 = 0.12;
@@ -63,12 +58,7 @@ int main() {
 
         // Output
         cout << "The total cost for " << consumption << " cubic meters is: $" << total_cost << endl;
-    }
-
-    return 0;
-}
-
-
+    } 
     );
     cout << "Problem 2\n";
     problemSolution2(
