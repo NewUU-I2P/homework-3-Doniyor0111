@@ -10,11 +10,11 @@ using namespace std;
 int main() {
     cout << "Problem 1\n";
     problemSolution1(
-            double fixamount = 13;
-    double first30 = 0.4;
-    double sec20 = 0.12;
-    double thr10 = 1.4;
-    double add = 1.5;
+            const double fixamount = 13;
+    const double first30 = 0.4;
+   const  double sec20 = 0.12;
+   const  double thr10 = 1.4;
+   const  double add = 1.5;
     int cost;
     cout<<"Consuption = "<<endl;
     std::cin>>cost;
