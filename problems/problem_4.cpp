@@ -28,7 +28,7 @@ std::string problemSolution4(const std::string &macAddress) {
  
 
     return 0;
-}
+
 
     // make use of control flow statements
     // return result;
