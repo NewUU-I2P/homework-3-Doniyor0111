@@ -3,10 +3,6 @@
 
 std::string problemSolution4(const std::string &macAddress) {
     // write your code here
-   
-
-   
-    std::string macAddress;
 
     std::stringstream ss(macAddress);
     std::string hexNumber;
@@ -24,16 +20,7 @@ std::string problemSolution4(const std::string &macAddress) {
     } else {
         addressType = "Multicast";
     }
-
- 
-
     return 0;
-
-
     // make use of control flow statements
     // return result;
-  
-
-
-
 }
