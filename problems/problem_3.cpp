@@ -4,7 +4,7 @@
 
 std::string problemSolution3(float height, char S) {
     // write your code here
-    if (S == 'M' && hight < 1.7){
+    if (S == 'M' && height < 1.7){
     }
     else if (S == 'M' && height >= 1.7 && hight < 1.85){
     }
