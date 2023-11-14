@@ -4,10 +4,9 @@
 std::string problemSolution4(const std::string &macAddress) {
     // write your code here
    
-int main() {
+
    
     std::string macAddress;
-    std::getline(std::cin, macAddress);
 
     std::stringstream ss(macAddress);
     std::string hexNumber;
@@ -30,7 +29,6 @@ int main() {
 
     return 0;
 }
-
 
     // make use of control flow statements
     // return result;
