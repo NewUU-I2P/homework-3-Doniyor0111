@@ -1,16 +1,9 @@
 #include <string>
+#include <iostream>
+
 
 std::string problemSolution3(float height, char S) {
     // write your code here
-
-    // use return to return your result
-    // make use of control flow statements
-}
-#include <iostream>
-
-using namespace std;
-int main() {
-
     if (sex == 'M' && hight < 1.7){
     }
     else if (sex == 'M' && hight >= 1.7 && hight < 1.85){
@@ -26,4 +19,9 @@ int main() {
 
 
     return 0;
+
+    // use return to return your result
+    // make use of control flow statements
 }
+
+
