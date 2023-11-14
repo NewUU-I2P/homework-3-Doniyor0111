@@ -1,5 +1,5 @@
 #include <string>
-#include <iostream>
+
 
 
 std::string problemSolution3(float height, char S) {
