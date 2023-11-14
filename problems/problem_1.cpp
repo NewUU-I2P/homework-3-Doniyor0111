@@ -1,34 +1,21 @@
-void problemSolution1(float consumed_water) {
+float problemSolution1(float consumed_water) {
     float cost;
     // write your code here
-    #include <iostream>
 
-using namespace std;
-int main () {
-    double fixamount = 13;
-    double first30 = 0.4;
-    double sec20 = 0.12;
-    double thr10 = 1.4;
-    double add = 1.5;
-    int cost;
-    cout<<"Consuption = "<<endl;
-    std::cin>>cost;
+    
+    if(consumed_water <= 30){
+        cost = 13 + consumed_water * 0.4;
 
-
-    if (cost <= 30){
-       cout<< double (fixamount + first30 * cost) << endl;
+        
+    } else if(consumed_water <= 50){
+        cost = 13 + 30 * 0.4 + (consumed_water - 30) * 0.12;
+        
+    } else if(consumed_water <= 60){
+        cost = 13 + 12 + 20 * 0.12 + (consumed_water - 50) * 1.4;
+        
+    } else {
+        cost = 13 + 12 + 20 * 0.12 + 14 + (consumed_water - 60) * 1.5;
+        
     }
-    else if (cost <= 50){
-        cout << double ( fixamount + first30 * 30 + (cost - 30) * sec20) << endl;
-    }
-    else if (cost <= 60){
-        cout << double ( fixamount + first30 * 30 + sec20 * 20 + (cost - 50) * thr10) << endl;
-    }
-    else {
-        cout << double ( fixamount + first30 * 30 + sec20 * 20 + thr10 * 10 + (cost - 60) * add) << endl;
-    }
-
-
-    return 0;
+    return cost;
 }
-
