@@ -3,13 +3,9 @@
 
 std::string problemSolution4(const std::string &macAddress) {
     // write your code here
-
-    // make use of control flow statements
-    // return result;
-  
-
+   
 int main() {
-    std::cout << "Enter MAC address (in x:x:x:x:x:x format): ";
+   
     std::string macAddress;
     std::getline(std::cin, macAddress);
 
@@ -30,9 +26,16 @@ int main() {
         addressType = "Multicast";
     }
 
-    std::cout << "Address Type: " << addressType << std::endl;
+ 
 
     return 0;
 }
+
+
+    // make use of control flow statements
+    // return result;
+  
+
+
 
 }
