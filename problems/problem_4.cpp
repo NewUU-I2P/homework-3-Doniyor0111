@@ -6,9 +6,7 @@ std::string problemSolution4(const std::string &macAddress) {
 
     // make use of control flow statements
     // return result;
-    #include <iostream>
-#include <sstream>
-#include <string>
+  
 
 int main() {
     std::cout << "Enter MAC address (in x:x:x:x:x:x format): ";
